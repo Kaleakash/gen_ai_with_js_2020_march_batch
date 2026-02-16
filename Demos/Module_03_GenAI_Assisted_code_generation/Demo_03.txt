@@ -1,0 +1,58 @@
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+// In-memory storage for items
+const items = [];
+
+// Add a new item
+app.post('/items', (req, res) => {
+    const item = req.body;
+    if (!item || typeof item !== 'object') {
+        return res.status(400).json({ error: "Invalid input" });
+    }
+    if (!item.name || !item.value) {
+        return res.status(400).json({ error: "Missing required fields: 'name' and 'value'" });
+    }
+    items.push(item);
+    res.status(201).json(item);
+});
+
+// Get all items
+app.get('/items', (req, res) => {
+    res.status(200).json(items);
+});
+
+// Update an item by ID
+app.put('/items/:itemId', (req, res) => {
+    const itemId = parseInt(req.params.itemId, 10);
+    if (itemId < 0 || itemId >= items.length) {
+        return res.status(404).json({ error: "Item not found" });
+    }
+    const updatedItem = req.body;
+    if (!updatedItem || typeof updatedItem !== 'object') {
+        return res.status(400).json({ error: "Invalid input" });
+    }
+    if (!updatedItem.name || !updatedItem.value) {
+        return res.status(400).json({ error: "Missing required fields: 'name' and 'value'" });
+    }
+    items[itemId] = updatedItem;
+    res.status(200).json(updatedItem);
+});
+
+// Delete an item by ID
+app.delete('/items/:itemId', (req, res) => {
+    const itemId = parseInt(req.params.itemId, 10);
+    if (itemId < 0 || itemId >= items.length) {
+        return res.status(404).json({ error: "Item not found" });
+    }
+    const deletedItem = items.splice(itemId, 1)[0];
+    res.status(200).json(deletedItem);
+});
+
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log('Server is running on http://localhost:${PORT}');
+});

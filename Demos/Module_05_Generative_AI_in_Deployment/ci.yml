@@ -1,0 +1,34 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Install New Relic CLI
+      run: |
+        curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash
+
+    - name: Configure New Relic
+      run: |
+        newrelic install -n monitoring
+
+    - name: Start New Relic monitoring
+      run: |
+        newrelic monitoring start
