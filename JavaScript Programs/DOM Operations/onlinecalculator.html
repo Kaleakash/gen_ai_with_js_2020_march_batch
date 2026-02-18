@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+   
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter the 1st Number"><br/>
+    <input type="text" id="n2" placeholder="Enter the 2nd Number"><br/>
+    <input type="button" value="Add" onclick="addNumbers()">
+    <input type="button" value="Subtract" onclick="subtractNumbers()">
+    <div id="result"></div>
+
+    <script>
+        function addNumbers() {
+            var num1 = parseFloat(document.getElementById("n1").value);
+            var num2 = parseFloat(document.getElementById("n2").value);
+            var sum = num1 + num2;
+            document.getElementById("result").innerText = "Result: " + sum;
+            resetFields();
+        }
+
+        function subtractNumbers() {
+            var num1 = parseFloat(document.getElementById("n1").value);
+            var num2 = parseFloat(document.getElementById("n2").value);
+            var difference = num1 - num2;
+            document.getElementById("result").innerText = "Result: " + difference;
+            resetFields();
+        }
+        function resetFields() {
+            document.getElementById("n1").value = "";
+            document.getElementById("n2").value = "";
+            
+        }
+    </script>
+</body>
+</html>
