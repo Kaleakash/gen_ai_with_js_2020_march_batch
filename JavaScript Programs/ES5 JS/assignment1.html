@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1 - Add/Subtract Menu</title>
+</head>
+<body>
+	<script>
+		do {
+			var option = prompt(
+				"Choose an option:\n1. Add\n2. Subtract \n \nEnter 1, or 2 to select an operation, or Cancel to exit."
+			);
+			if (option === null) break;
+			option = option.trim();
+
+			var val1 = prompt("Enter the first number:");
+			if (val1 === null) break;
+			var num1 = Number(val1);
+			if (isNaN(num1)) {
+				alert("Invalid number entered. Please try again.");
+				continue;
+			}
+
+			var val2 = prompt("Enter the second number:");
+			if (val2 === null) break;
+			var num2 = Number(val2);
+			if (isNaN(num2)) {
+				alert("Invalid number entered. Please try again.");
+				continue;
+			}
+
+			var result;
+			switch(option) {
+				case "1":
+					result = num1 + num2;
+					alert("Result: " + num1 + " + " + num2 + " = " + result);
+					break;
+				case "2":
+					result = num1 - num2;
+					alert("Result: " + num1 + " - " + num2 + " = " + result);
+					break;
+				default:
+					alert("Invalid option. Please enter 1 or 2.");
+					continue;
+			}
+		} while (confirm("Do you want to perform another operation?"));
+		alert("Thank you! Exiting the program.");
+	</script>
+</body>
+</html>

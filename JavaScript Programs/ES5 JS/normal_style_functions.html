@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello() {
+            alert("user defined hello functions");
+        }
+        //hello();
+        // need function with passing parameters 
+        function add(a, b) {
+            var sum = a + b;
+            alert("The sum of " + a + " and " + b + " is: " + sum);
+        }
+        // function with return type
+        function multiply(x, y) {
+            return x * y;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        hello();
+        add(5, 10);
+        var result = multiply(5, 10);
+        alert("The result of multiplication is: " + result);
+    </script>
+</body>
+</html>
