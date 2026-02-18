@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to Dom Operation 1st tag</h2>
+    <h2>Welcome to Dom Operation 2nd tag</h2>
+    <p id="demo">This is a demonstration of DOM manipulation.</p>
+    <input type="text" id="myInput" name="myInput1" placeholder="Type something..."><br/>
+    <input type="text" id="myInput2" name="myInput2"><br/>
+    <div id="output"></div>
+    <input type="button" value="basic DOM Operation" onclick="domOperation()"/>
+    <script>
+        function domOperation() {
+            //alert("Event Triggered");
+            var numberOfT2Tags = document.getElementsByTagName("h2").length;
+                alert("Number of H2 Tags: " + numberOfT2Tags); 
+                for(var i=0; i<numberOfT2Tags; i++){
+                    var h2TagValue = document.getElementsByTagName("h2")[i].innerText;
+                    alert("H2 Tag Value: " + h2TagValue);
+                }         
+            var h2TagValue = document.getElementsByTagName("h2")[1].innerText;
+            alert("H2 Tag Value: " + h2TagValue);
+            // var pTagValue = document.getElementById("demo").innerText;
+            // alert("P Tag Value: " + pTagValue);
+            // var inputValue = document.getElementById("myInput").value;
+            // // alert("Input Value: " + inputValue);
+            // document.getElementById("myInput2").value = inputValue.toUpperCase();
+            // document.getElementById("myInput").value = "";
+            // document.getElementById("output").innerText = "You entered: " + inputValue;
+        }
+    </script>
+</body>
+</html>
