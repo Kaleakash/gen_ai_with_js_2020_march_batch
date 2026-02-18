@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // provide simple if statement with meaning full variable name
+        let age = 19;
+        if (age >= 18) {
+            console.log("You are eligible to vote.");
+        } else {
+            console.log("You are not eligible to vote.");
+        }
+        // provide if else if examples 
+        let score = 85;
+        if (score >= 90) {
+            console.log("You got an A.");
+        } else if (score >= 80) {
+            console.log("You got a B.");
+        } else if (score >= 70) {
+            console.log("You got a C.");
+        } else if (score >= 60) {
+            console.log("You got a D.");
+        } else {
+            console.log("You got an F.");
+        }
+        // provide switch statement with document.write on browser to display the result 
+        let day = new Date().getDay();
+        switch (day) {
+            case 0:
+                document.write("Today is Sunday.");
+                break;
+            case 1:
+                document.write("Today is Monday.");
+                break;
+            case 2:
+                document.write("Today is Tuesday.");
+                break;
+            case 3:
+                document.write("Today is Wednesday.");
+                break;
+            case 4:
+                document.write("Today is Thursday.");
+                break;
+            case 5:
+                document.write("Today is Friday.");
+                break;
+            case 6:
+                document.write("Today is Saturday.");
+                break;
+        }
+    </script>
+</body>
+</html>

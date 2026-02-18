@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Food Dashboard - User Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #6c3636;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= Sidebar ================= */
+
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.nav-item {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: #f0f0f0;
+}
+
+.sub-menu {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.sub-menu div {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #777;
+}
+
+.help {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ================= Main ================= */
+
+.main {
+  flex: 1;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search {
+  width: 400px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.top-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #d93f21;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: #e5e5e5;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card {
+  background: #eaeaea;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.card h1 {
+  margin-bottom: 30px;
+}
+
+.profile-section {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-img-container img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.upload-btn {
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.email-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ============ Responsive ============ */
+
+@media(max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .search {
+    width: 200px;
+  }
+
+  .profile-section {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>Food App</h2>
+
+  <div class="nav-item active">🏠 Home</div>
+
+  <div class="nav-item">🍴 Menu</div>
+  <div class="sub-menu">
+    <div>Overview</div>
+    <div>Order History</div>
+    <div>Cart</div>
+    <div>Feedback</div>
+  </div>
+
+  <div class="section-title">Sales</div>
+  <div class="sub-menu">
+    <div>Analytics</div>
+    <div>Order Status</div>
+    <div>Receipt</div>
+  </div>
+
+  <div class="help">ℹ Help & Support</div>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <input type="text" class="search" placeholder="Search for dishes" />
+
+    <div class="top-actions">
+      <button class="btn-primary">New order</button>
+      <button class="btn-primary">Menu</button>
+    </div>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="card">
+    <h1>User Profile</h1>
+
+    <div class="profile-section">
+      <div class="profile-img-container">
+        <img id="profilePreview" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Profile" />
+        <div class="upload-btn">
+          <input type="file" id="imageUpload" hidden />
+          <button class="btn-secondary" onclick="document.getElementById('imageUpload').click()">Upload image</button>
+          <p style="font-size:12px;margin-top:6px;">Formats: jpg, gif, png. Max: 500k.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-group">
+          <label>Full name*</label>
+          <input type="text" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+          <label>Email address</label>
+          <div class="email-row">
+            <span>user@example.com</span>
+            <button class="btn-secondary">Edit email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-secondary">Discard</button>
+      <button class="btn-primary">Apply changes</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+// Image preview
+document.getElementById("imageUpload").addEventListener("change", function(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  if (file.size > 500000) {
+    alert("File too large. Max 500KB.");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    document.getElementById("profilePreview").src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>
