@@ -28,7 +28,7 @@
             console.log("You got an F.");
         }
         // provide switch statement with document.write on browser to display the result 
-        let day = new Date().getDay();
+        let day = new Date().getDay(); // Invalid day value to demonstrate default case
         switch (day) {
             case 0:
                 document.write("Today is Sunday.");
@@ -51,6 +51,8 @@
             case 6:
                 document.write("Today is Saturday.");
                 break;
+            default:
+                    document.writeln("Invalid day value. Please enter a number between 0 and 6.");
         }
     </script>
 </body>
