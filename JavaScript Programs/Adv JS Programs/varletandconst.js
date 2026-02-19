@@ -22,4 +22,5 @@ document.write("<br>Value of i after loop: " + i); // Output: 10000, var is func
 for(let j=0;j<10000;j++){
     
 }
-//document.write("<br>Value of j after loop: " + j); // This will cause an error because let is block-scoped
+
+document.write("<br>Value of j after loop: " + j); // This will cause an error because let is block-scoped
