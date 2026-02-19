@@ -5,7 +5,6 @@ let product1 = {
     brand: "Dell",
     model: "XPS 13"
 };
-
 document.write("Product Name: " + product1.name + "<br>");
 document.write("Price: $" + product1.price + "<br>");
 document.write("Brand: " + product1.brand + "<br>");
