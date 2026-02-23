@@ -4,12 +4,15 @@
 // on submit add these information in array 
 // display in table format
 import React, { useState } from 'react';
+import EmployeeTableFormat from './EmployeeTableFormat';
+import EmployeeListFormat from './EmployeeListFormat';
 
 const Employee = () => {   
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [department, setDepartment] = useState('');
     const [employees, setEmployees] = useState([]);
+    const [toggleFormat, setToggleFormat] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault(); // disable page refresh on submit
@@ -47,7 +50,17 @@ const Employee = () => {
                 <button type="submit">Add Employee</button>
             </form>
             <h2>Employee List</h2>
-            <table>
+            {/* <EmployeeTableFormat employeesData={employees}/> */}
+            {/* <EmployeeListFormat employeesData={employees} /> */}
+                <button onClick={() => setToggleFormat(!toggleFormat)}>
+                    {toggleFormat ? 'Switch to List Format' : 'Switch to Table Format'}
+                </button>
+                {toggleFormat ? (
+                    <EmployeeTableFormat employeesData={employees} />
+                ) : (
+                    <EmployeeListFormat employeesData={employees} />
+                )}
+            {/* <table>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -64,7 +77,7 @@ const Employee = () => {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </table> */}
         </div>
     );
 };
