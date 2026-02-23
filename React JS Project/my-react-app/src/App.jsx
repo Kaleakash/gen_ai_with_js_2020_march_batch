@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import Employee from "./Employee";
 
 function Header() {
 
@@ -14,11 +15,12 @@ function App() {
 
   return(
     <div>
-      <Header />
+      {/* <Header />
       <h1>Welcome to React App</h1>
       <p>This app created by Akash Kale</p>
-      <Counter></Counter>
-      <Footer />
+      <Counter></Counter> */}
+      <Employee></Employee>
+      {/* <Footer /> */}
     </div>
   )
 }
