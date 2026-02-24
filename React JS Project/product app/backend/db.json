@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "pname": "Wireless Mouse",
+      "price": 799,
+      "qty": 50,
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600"
+    },
+    {
+      "pname": "Mechanical Keyboard",
+      "price": 2499,
+      "qty": 30,
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600"
+    },
+    {
+      "pname": "USB-C Charger",
+      "price": 1199,
+      "qty": 100,
+      "imageUrl": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=600"
+    },
+    {
+      "pname": "Laptop Stand",
+      "price": 1599,
+      "qty": 40,
+      "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600"
+    },
+    {
+      "pname": "Bluetooth Headphones",
+      "price": 3499,
+      "qty": 25,
+      "imageUrl": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600"
+    },
+    {
+      "pname": "HD Webcam",
+      "price": 2199,
+      "qty": 35,
+      "imageUrl": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600"
+    },
+    {
+      "pname": "External Hard Drive 1TB",
+      "price": 4999,
+      "qty": 20,
+      "imageUrl": "https://images.unsplash.com/photo-1616627980723-8f2c14b6f6c5?w=600"
+    },
+    {
+      "pname": "USB Flash Drive 64GB",
+      "price": 699,
+      "qty": 150,
+      "imageUrl": "https://images.unsplash.com/photo-1585079542156-2755d9c8a094?w=600"
+    },
+    {
+      "pname": "Gaming Mouse Pad",
+      "price": 499,
+      "qty": 80,
+      "imageUrl": "https://images.unsplash.com/photo-1612197527762-42c9fe9e3b32?w=600"
+    },
+    {
+      "pname": "Smartphone Tripod",
+      "price": 899,
+      "qty": 60,
+      "imageUrl": "https://images.unsplash.com/photo-1519183071298-a2962eadcdb2?w=600"
+    },
+    {
+      "pname": "Noise Cancelling Earbuds",
+      "price": 2999,
+      "qty": 45,
+      "imageUrl": "https://images.unsplash.com/photo-1606220838315-056192d5e927?w=600"
+    },
+    {
+      "pname": "Portable Bluetooth Speaker",
+      "price": 2599,
+      "qty": 55,
+      "imageUrl": "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=600"
+    },
+    {
+      "pname": "Smart Watch",
+      "price": 4999,
+      "qty": 35,
+      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+    },
+    {
+      "pname": "Fitness Band",
+      "price": 1999,
+      "qty": 70,
+      "imageUrl": "https://images.unsplash.com/photo-1557935728-e6d1eaabe558?w=600"
+    },
+    {
+      "pname": "Laptop Backpack",
+      "price": 1799,
+      "qty": 40,
+      "imageUrl": "https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600"
+    },
+    {
+      "pname": "Wireless Keyboard",
+      "price": 1899,
+      "qty": 25,
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-6f4f0d5f64f6?w=600"
+    },
+    {
+      "pname": "Monitor 24 Inch",
+      "price": 12999,
+      "qty": 15,
+      "imageUrl": "https://images.unsplash.com/photo-1587825140708-8d5c8b9c77f6?w=600"
+    },
+    {
+      "pname": "Graphics Drawing Tablet",
+      "price": 6499,
+      "qty": 18,
+      "imageUrl": "https://images.unsplash.com/photo-1587825140708-3d9f6c0b9c33?w=600"
+    },
+    {
+      "pname": "Desk Lamp LED",
+      "price": 1299,
+      "qty": 60,
+      "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600"
+    },
+    {
+      "pname": "Wireless Router",
+      "price": 2999,
+      "qty": 22,
+      "imageUrl": "https://images.unsplash.com/photo-1603791440384-bfdc4d53a9f1?w=600"
+    },
+    {
+      "pname": "Power Bank 20000mAh",
+      "price": 2199,
+      "qty": 65,
+      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600"
+    },
+    {
+      "pname": "HDMI Cable",
+      "price": 399,
+      "qty": 120,
+      "imageUrl": "https://images.unsplash.com/photo-1618220179428-22790b461013?w=600"
+    },
+    {
+      "pname": "USB Hub",
+      "price": 999,
+      "qty": 75,
+      "imageUrl": "https://images.unsplash.com/photo-1587825140708-4b78d66f7d9f?w=600"
+    },
+    {
+      "pname": "Microphone USB",
+      "price": 3499,
+      "qty": 28,
+      "imageUrl": "https://images.unsplash.com/photo-1590602846941-2b8c90c7f2b5?w=600"
+    },
+    {
+      "pname": "Office Chair",
+      "price": 8999,
+      "qty": 10,
+      "imageUrl": "https://images.unsplash.com/photo-1598300053651-7cdb0f5a6e46?w=600"
+    }
+  ]
+}
