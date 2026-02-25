@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Rollup } from "vite";
+
 
 function Login() {
 let [email, setEmail] = useState("");
@@ -26,8 +26,8 @@ let handleSubmit = (e) => {
                 onChange={(e) => setPassword(e.target.value)} /><br/>
                 <button type="submit">Login</button>
             </form>
-            {msg && <p>{msg}</p>}
-        </div>
+            {msg}
+         </div>
     )
 }
 export default Login;
