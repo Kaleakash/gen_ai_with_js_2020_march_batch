@@ -19,6 +19,7 @@ function App() {
       <h1>Welcome to React App</h1>
       <p>This app created by Akash Kale</p>
       <Counter></Counter> */}
+      <h3>Employee Details, this App created by Akash!</h3>
       <Employee></Employee>
       {/* <Footer /> */}
     </div>

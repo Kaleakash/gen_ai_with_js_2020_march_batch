@@ -11,13 +11,15 @@ describe("Login Component", () => {
     test("simple test ",() => {
         expect(1 + 2).toBe(3);
     })
-    test("should render the login form", () => {
-        // Render the Login component
-        // Assert that the form elements are present
-        render(<Login />);
-        const loginElement = screen.getByText(/Login page/i);
-        expect(loginElement).toBeInTheDocument();
-    })
+
+
+        test("should render the login form with Heading as 'Login page'", () => {
+            // Render the Login component
+            // Assert that the form elements are present
+            render(<Login />);
+            const loginElement = screen.getByText(/Login page/i);
+            expect(loginElement).toBeInTheDocument();
+        })
 
 
     test("should show error message when fields are empty", async() => {
@@ -31,9 +33,11 @@ describe("Login Component", () => {
 
     test("InValid email Id or password ", async() => {
         render(<Login />);
+        // reference of email and password input field
         const emailInput = screen.getByPlaceholderText(/email/i);
         const passwordInput = screen.getByPlaceholderText(/password/i);
 
+        // Simulate user typing invalid email and password
         await userEvent.type(emailInput, "wrong@example.com");
         await userEvent.type(passwordInput, "wrongpassword");        
 
